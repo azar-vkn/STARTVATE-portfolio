@@ -159,7 +159,7 @@ const htmlBody = () => `<!doctype html>
         <tr><td align="center" style="padding:22px 36px 20px;">
           <table role="presentation" cellpadding="0" cellspacing="0"><tr>
             <td align="center" style="background:#D97757;border-radius:999px;box-shadow:0 10px 24px -8px rgba(217,119,87,.5);">
-              <a href="https://github.com/azar-vkn/STARTVATE-portfolio" target="_blank" style="display:inline-block;padding:13px 30px;font-size:14.5px;font-weight:600;color:#fff;text-decoration:none;border-radius:999px;">
+              <a href="https://startvate-portfolio.vercel.app/#product" target="_blank" style="display:inline-block;padding:13px 30px;font-size:14.5px;font-weight:600;color:#fff;text-decoration:none;border-radius:999px;">
                 Explore the Ecosystem &rarr;
               </a>
             </td>
