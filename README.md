@@ -51,6 +51,26 @@ which must never appear in this repo.
 Stored per signup: `email`, `source`, `referrer`, `created_at`. Duplicate addresses are rejected by
 a unique index and shown as "you're already on the list".
 
+### Welcome email
+
+A greeting goes out on every new signup via **EmailJS**, sent from the browser
+([`assets/js/waitlist.js`](assets/js/waitlist.js), configured in
+[`assets/js/emailjs-config.js`](assets/js/emailjs-config.js)).
+
+Storing the signup is what decides success; the email is best-effort on top. If EmailJS fails the
+visitor still gets an honest confirmation — the address is safely in the table — and the error goes
+to the console and the EmailJS dashboard. The reverse never happens: if the insert fails, no
+greeting is sent and the visitor is told to try again.
+
+Duplicates are not re-greeted.
+
+**Note on the EmailJS keys:** unlike a Resend or SendGrid key, EmailJS credentials are meant to be
+public — but anyone can copy them off the page and spend your monthly quota. Restrict them in the
+EmailJS dashboard (Account → Security) to your deployed domain once the site is hosted.
+
+A server-side alternative (Supabase Edge Function + Resend) is written but not deployed — see
+[`supabase/README.md`](supabase/README.md). Use one or the other, never both.
+
 ## What's interactive
 
 | Feature | Where | Behaviour |

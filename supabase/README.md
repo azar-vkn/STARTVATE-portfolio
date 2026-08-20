@@ -1,6 +1,11 @@
 # Supabase setup
 
-Two things live here: the waitlist table, and the welcome email that goes out when someone joins.
+> **Current state:** the waitlist table (section 1) is live. The welcome email is currently sent
+> **client-side via EmailJS** — see `assets/js/waitlist.js` and `assets/js/emailjs-config.js`.
+> Section 2 below documents the server-side alternative (Supabase Edge Function + Resend), which is
+> written but **not deployed**.
+>
+> Run only one of them. If both are active, every signup gets two emails.
 
 ## 1. Table (done)
 

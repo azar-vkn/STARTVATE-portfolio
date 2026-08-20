@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * STARTVATE — waitlist welcome email
  * -----------------------------------------------------------------
@@ -14,7 +15,14 @@
  * SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are injected automatically.
  */
 
-import { createClient } from 'jsr:@supabase/supabase-js@2';
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+declare const Deno: {
+  env: {
+    get(key: string): string | undefined;
+  };
+  serve(handler: (req: Request) => Promise<Response> | Response): void;
+};
 
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
 const FROM = Deno.env.get('WAITLIST_FROM') ?? 'STARTVATE <onboarding@resend.dev>';
@@ -192,7 +200,7 @@ const htmlBody = () => `<!doctype html>
 /* Handler                                                           */
 /* ---------------------------------------------------------------- */
 
-Deno.serve(async (req) => {
+Deno.serve(async (req: Request) => {
   if (req.method !== 'POST') return json(405, { error: 'Method not allowed' });
 
   if (!RESEND_API_KEY) {
