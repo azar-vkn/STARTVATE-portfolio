@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>STARTVATE — The discovery layer for the startup ecosystem</title>
+<meta name="description" content="STARTVATE brings founders, startups, opportunities and startup intelligence into one AI-powered discovery experience. Find the right people. Discover the right opportunities. Know what to do next." />
+<meta name="theme-color" content="#FAF9F5" />
+<meta property="og:title" content="STARTVATE — The operating layer for the startup ecosystem" />
+<meta property="og:description" content="One intelligent ecosystem for discovering founders, startups, opportunities, and the next step to turn ideas into companies." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%23D97757'/><path d='M16 7l2.4 6.6L25 16l-6.6 2.4L16 25l-2.4-6.6L7 16l6.6-2.4z' fill='white'/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<!-- ===================== ICON SPRITE ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="s" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
+  </defs>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M18.5 15l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="M12.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13"/><path d="M6 11.5l6 6 6-6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19v-1.4a3.6 3.6 0 0 0-3.6-3.6H7.6A3.6 3.6 0 0 0 4 17.6V19"/><circle cx="9.5" cy="8" r="3.2"/><path d="M17.5 14.3A3.6 3.6 0 0 1 20 17.7V19"/><path d="M16 5.3a3.2 3.2 0 0 1 0 5.4"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2c3 2.3 4.8 5.8 4.8 9.1L14 15.6h-4L7.2 12.3C7.2 9 9 5.5 12 3.2z"/><circle cx="12" cy="10" r="1.7"/><path d="M9.6 16.6L7.4 19l1.1 2 2.2-2.3"/><path d="M14.4 16.6L16.6 19l-1.1 2-2.2-2.3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.5A2.5 2.5 0 0 1 7 3h12.5v14.5H7a2.5 2.5 0 0 0-2.5 2.5z"/><path d="M19.5 17.5V21H7"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.6"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.8-5.8 6.8-10.6A6.8 6.8 0 0 0 5.2 10.4C5.2 15.2 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6.5L9.5 17 4.5 12"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 2.5L4.5 13.8h6.4L10 21.5l8.8-11.3h-6.4z"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M15.6 8.4l-2.3 5.6-5.6 2.3 2.3-5.6z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.2 15.6 4.2 10.3a4.1 4.1 0 0 1 7.8-1.9 4.1 4.1 0 0 1 7.8 1.9c0 5.3-7.8 10.1-7.8 10.1z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.8a7.9 7.9 0 0 1-11.6 7L4 20.3l1.6-4.7a7.9 7.9 0 1 1 14.9-3.8z"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.8h11v16.9l-5.5-3.9-5.5 3.9z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.6"/><circle cx="17.5" cy="6" r="2.6"/><circle cx="17.5" cy="18" r="2.6"/><path d="M8.4 10.8l6.7-3.5M8.4 13.2l6.7 3.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3L10.6 13.4"/><path d="M21 3l-6.8 18-3.6-7.6L3 9.8z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8.5 4.6L12 12.2 3.5 7.6z"/><path d="M3.5 12.4L12 17l8.5-4.6"/><path d="M3.5 16.6L12 21.2l8.5-4.6"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.2h17"/><path d="M7 20V13M12 20V5.5M17 20v-9.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M3.4 12h17.2"/><path d="M12 3.2a14 14 0 0 1 0 17.6M12 3.2a14 14 0 0 0 0 17.6"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="7" width="17.6" height="13" rx="2.6"/><path d="M9 7V5.6A1.6 1.6 0 0 1 10.6 4h2.8A1.6 1.6 0 0 1 15 5.6V7"/><path d="M3.2 12.4h17.6"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9.4 4.6L12 13.2 2.6 8.6z"/><path d="M6.4 11v4.4c0 1.6 2.5 2.9 5.6 2.9s5.6-1.3 5.6-2.9V11"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 18.2h4.8M10.4 21h3.2"/><path d="M12 3.2A6 6 0 0 0 8.4 14c.7.6 1.1 1.4 1.2 2.2h4.8c.1-.8.5-1.6 1.2-2.2A6 6 0 0 0 12 3.2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M12 7.2V12l3.4 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.8 2.9v5.7c0 4.4-3.3 7.7-7.8 9-4.5-1.3-7.8-4.6-7.8-9V6.1z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7.5L4 12l5 4.5M15 7.5l5 4.5-5 4.5"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a8.8 8.8 0 1 0 0 17.6c1.2 0 2-.9 2-2 0-1.3-1-1.7-1-2.7 0-.8.7-1.4 1.5-1.4H17a4.1 4.1 0 0 0 4-4.1c0-4.3-4-7.4-9-7.4z"/><circle cx="8.4" cy="9.4" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="7.4" r="1" fill="currentColor" stroke="none"/><circle cx="15.6" cy="9.4" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6l2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.8l5.9-.8z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 13.4a4.2 4.2 0 0 0 6 0l2.2-2.2a4.2 4.2 0 0 0-6-6l-1.2 1.2"/><path d="M13.4 10.6a4.2 4.2 0 0 0-6 0l-2.2 2.2a4.2 4.2 0 0 0 6 6l1.2-1.2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.6 20.4h16.8"/><rect x="4.6" y="3.6" width="7.4" height="16.8" rx="1.6"/><rect x="12" y="9.6" width="7.4" height="10.8" rx="1.6"/><path d="M7.4 7.4h1.8M7.4 11h1.8M7.4 14.6h1.8M15 13h1.6M15 16.6h1.6"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M12 6.6v10.8"/><path d="M14.8 9.4c0-1-1.2-1.7-2.8-1.7s-2.8.7-2.8 1.7 1.1 1.5 2.8 1.8 2.8.8 2.8 1.9-1.2 1.8-2.8 1.8-2.8-.8-2.8-1.8"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4.2h11.6l-1.8 3.9 1.8 3.9H6"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.8" y="3.8" width="7" height="7" rx="2"/><rect x="13.2" y="3.8" width="7" height="7" rx="2"/><rect x="3.8" y="13.2" width="7" height="7" rx="2"/><rect x="13.2" y="13.2" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 16.5l5.5-5.5 3.6 3.6 7-7"/><path d="M15.4 7.6h4.2v4.2"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.2h16l-6.4 7.6v6.4l-3.2 1.6v-8z"/></symbol>
+  <symbol id="i-user-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="8" r="3.4"/><path d="M3.8 19.2v-1.4a3.7 3.7 0 0 1 3.7-3.7h4"/><path d="M17.6 13.6v5.6M14.8 16.4h5.6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.8" y="10.2" width="14.4" height="10" rx="2.6"/><path d="M8.4 10.2V7.6a3.6 3.6 0 0 1 7.2 0v2.6"/></symbol>
+</svg>
+
+<!-- ========================= NAV ========================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="STARTVATE home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9" fill="#D97757"/>
+        <path d="M16 6.5l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">STARTVATE</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#product">Product</a>
+      <a href="#how">How It Works</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#vision">Vision</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav__right">
+      <a class="btn btn--primary btn--sm" href="#waitlist">Join Waitlist</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#product">Product</a>
+  <a href="#how">How It Works</a>
+  <a href="#ecosystem">Ecosystem</a>
+  <a href="#vision">Vision</a>
+  <a href="#about">About</a>
+  <a class="btn btn--primary" href="#waitlist">Join Waitlist</a>
+</div>
+
+<main id="top">
+
+<!-- ========================= HERO ========================= -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <span class="eyebrow reveal"><i class="dot"></i> The discovery layer for the startup ecosystem</span>
+
+    <h1 class="h1 reveal" data-d="1">Build what's next.<br />Find who's <span class="serif-em brand-text">building it</span> with you.</h1>
+
+    <p class="lead hero__sub reveal" data-d="2">
+      One intelligent ecosystem for discovering founders, startups, opportunities, and the next
+      step to turn ideas into companies.
+    </p>
+
+    <div class="hero__cta reveal" data-d="3">
+      <a class="btn btn--primary" href="#product">Explore the Ecosystem <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn--ghost" href="#how">See How It Works</a>
+    </div>
+
+    <div class="hero__meta reveal" data-d="4">
+      <span><svg><use href="#i-users"/></svg> People &amp; co-founders</span>
+      <span><svg><use href="#i-target"/></svg> Opportunities &amp; funding</span>
+      <span><svg><use href="#i-spark"/></svg> AI-recommended next steps</span>
+    </div>
+  </div>
+
+  <!-- Product mockup -->
+  <div class="wrap mockup-stage reveal" data-d="5">
+    <div class="floaty floaty--l" aria-hidden="true">
+      <div class="mini-card">
+        <span class="avatar avatar--sm avatar--c">MK</span>
+        <span><span class="k">Potential co-founder</span><br /><span class="v">92% match · ML + AgriTech</span></span>
+      </div>
+    </div>
+    <div class="floaty floaty--r" aria-hidden="true">
+      <div class="mini-card">
+        <span class="avatar avatar--sm avatar--d"><svg style="width:15px;height:15px"><use href="#i-target"/></svg></span>
+        <span><span class="k">Opportunity found</span><br /><span class="v">AgriTech Challenge · 12 days left</span></span>
+      </div>
+    </div>
+
+    <div class="window">
+      <div class="window__bar">
+        <div class="window__dots"><i></i><i></i><i></i></div>
+        <div class="window__url"><svg><use href="#i-lock"/></svg> app.startvate.com/discover</div>
+        <div style="width:56px"></div>
+      </div>
+      <div class="window__body">
+        <div class="app">
+          <aside class="app__side">
+            <div class="app__nav">
+              <a class="is-active"><svg><use href="#i-search"/></svg> Discover</a>
+              <a><svg><use href="#i-users"/></svg> People</a>
+              <a><svg><use href="#i-target"/></svg> Opportunities</a>
+              <a><svg><use href="#i-rocket"/></svg> Startups</a>
+              <a><svg><use href="#i-message"/></svg> Builder Feed</a>
+            </div>
+            <h6>Your focus</h6>
+            <div class="app__nav">
+              <a><svg><use href="#i-bulb"/></svg> AI · Agriculture</a>
+              <a><svg><use href="#i-user-plus"/></svg> Co-founder search</a>
+              <a><svg><use href="#i-money"/></svg> Pre-seed funding</a>
+            </div>
+          </aside>
+
+          <div class="app__main">
+            <div class="app__searchbar">
+              <svg><use href="#i-search"/></svg>
+              <div class="q"><span id="heroType"></span><i class="caret"></i></div>
+              <button class="btn btn--ai btn--sm"><svg><use href="#i-spark"/></svg> Ask AI</button>
+            </div>
+
+            <div class="app__intent">
+              <span class="chip chip--brand"><svg style="width:13px;height:13px"><use href="#i-spark"/></svg> Intent understood</span>
+              <span class="chip">Industry · Agriculture</span>
+              <span class="chip">Tech · AI / ML</span>
+              <span class="chip">Stage · Early</span>
+              <span class="chip">Needs · Co-founder, Funding</span>
+            </div>
+
+            <div class="app__cols">
+              <div class="app__col">
+                <h6><i style="background:var(--acc-people)"></i> People</h6>
+                <div class="res"><div class="res__top"><span class="avatar avatar--sm">MK</span><div><div class="res__t">Meera Krishnan</div><div class="res__s">ML Engineer · Bengaluru</div></div></div><div class="res__m" style="margin-top:8px">92% match · Co-founder</div></div>
+                <div class="res"><div class="res__top"><span class="avatar avatar--sm avatar--b">DR</span><div><div class="res__t">Dr. Rohan Patel</div><div class="res__s">AgriScience mentor</div></div></div><div class="res__m" style="margin-top:8px">87% match · Mentor</div></div>
+              </div>
+              <div class="app__col">
+                <h6><i style="background:var(--acc-startup)"></i> Startups</h6>
+                <div class="res"><div class="res__t">CropSense AI</div><div class="res__s">Yield prediction · Seed · 14 people</div></div>
+                <div class="res"><div class="res__t">TerraGrid</div><div class="res__s">Soil intelligence · Pre-seed</div></div>
+              </div>
+              <div class="app__col">
+                <h6><i style="background:var(--acc-opp)"></i> Opportunities</h6>
+                <div class="res"><div class="res__t">AgriTech Innovation Challenge</div><div class="res__s">Closes in 12 days</div><div class="res__m" style="margin-top:6px">94% match</div></div>
+                <div class="res"><div class="res__t">GreenField Accelerator</div><div class="res__s">Cohort 7 · Remote</div><div class="res__m" style="margin-top:6px">89% match</div></div>
+              </div>
+              <div class="app__col">
+                <h6><i style="background:var(--acc-know)"></i> Knowledge</h6>
+                <div class="res"><div class="res__t">Precision farming market brief</div><div class="res__s">Research · 6 min read</div></div>
+                <div class="res"><div class="res__t">AgriTech Builders</div><div class="res__s">Community · 4.2k members</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note" style="justify-content:center;width:100%;margin-top:22px">
+      <svg><use href="#i-bulb"/></svg> Illustrative product preview — sample data shown for demonstration.
+    </p>
+  </div>
+</section>
+
+<!-- ================= SEARCH EXPERIENCE ================= -->
+<section class="section section--paper" id="product">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow"><i class="dot"></i> The product</span>
+      <h2 class="h2">What are you building?</h2>
+      <p class="lead">
+        One search replaces a dozen tabs. Type an idea — STARTVATE returns the people, startups,
+        opportunities and knowledge around it, ranked for where you are right now.
+      </p>
+    </div>
+
+    <div class="search-panel reveal" data-d="1">
+      <form class="searchbox" id="searchForm" autocomplete="off" role="search">
+        <svg><use href="#i-search"/></svg>
+        <input id="searchInput" type="text" placeholder="Try: AI Agriculture Startup" aria-label="Search the startup ecosystem" value="AI Agriculture Startup" />
+        <div class="searchbox__actions">
+          <button type="button" class="btn btn--ai btn--sm" data-ai-open><svg><use href="#i-spark"/></svg> <span>Ask AI</span></button>
+          <button type="submit" class="btn btn--primary btn--sm">Search</button>
+        </div>
+      </form>
+
+      <div class="search-suggest" id="suggest">
+        <button class="sugg" data-q="AI Agriculture Startup">AI Agriculture Startup</button>
+        <button class="sugg" data-q="Fintech co-founder in India">Fintech co-founder in India</button>
+        <button class="sugg" data-q="Climate hardware grants">Climate hardware grants</button>
+        <button class="sugg" data-q="Student hackathons this month">Student hackathons this month</button>
+        <button class="sugg" data-q="HealthTech seed investors">HealthTech seed investors</button>
+      </div>
+
+      <div class="results" id="results" aria-live="polite">
+        <div class="results__head">
+          <div class="results__q">Results for <b id="resultsQuery">AI Agriculture Startup</b> · <span id="resultsCount">49</span> signals across the ecosystem</div>
+          <div class="tabs" id="tabs" role="tablist">
+            <button class="tab is-active" data-tab="all" role="tab">All</button>
+            <button class="tab" data-tab="people" role="tab">People <span class="n" data-count="people"></span></button>
+            <button class="tab" data-tab="startups" role="tab">Startups <span class="n" data-count="startups"></span></button>
+            <button class="tab" data-tab="opps" role="tab">Opportunities <span class="n" data-count="opps"></span></button>
+            <button class="tab" data-tab="knowledge" role="tab">Knowledge <span class="n" data-count="knowledge"></span></button>
+          </div>
+        </div>
+        <div class="results__body" id="resultsBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI INTELLIGENCE LAYER ================= -->
+<section class="section section--alt" id="how">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow"><i class="dot"></i> Intelligence layer</span>
+      <h2 class="h2">AI understands your intent</h2>
+      <p class="lead">
+        There is no chatbot standing between you and the ecosystem. AI runs underneath the product —
+        reading what you typed, inferring what you actually need, and shaping every result you see.
+      </p>
+    </div>
+
+    <div class="intent reveal" data-d="1">
+      <div class="intent__step">
+        <div class="intent__label">You search</div>
+        <div class="searchbox" style="box-shadow:none;padding:8px 16px;border-radius:14px">
+          <svg style="width:17px;height:17px"><use href="#i-search"/></svg>
+          <div style="font-size:15px;font-weight:550">AI Agriculture Startup</div>
+        </div>
+        <p class="small muted" style="margin-top:14px">Three words. No filters, no forms, no scrolling through five different platforms.</p>
+      </div>
+
+      <div class="intent__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
+
+      <div class="intent__step" style="border-color:var(--brand-100);background:linear-gradient(150deg,var(--brand-25),var(--surface))">
+        <div class="intent__label" style="color:var(--brand-700)">AI understands</div>
+        <div class="kv"><span class="k">Industry</span><span class="v">Agriculture</span></div>
+        <div class="kv"><span class="k">Technology</span><span class="v">AI / Machine learning</span></div>
+        <div class="kv"><span class="k">Startup stage</span><span class="v">Early stage</span></div>
+        <div class="kv"><span class="k">Likely needs</span><span class="v">Co-founder, funding</span></div>
+        <div class="kv"><span class="k">Also relevant</span><span class="v">Mentorship, market research</span></div>
+      </div>
+
+      <div class="intent__arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></div>
+
+      <div class="intent__step">
+        <div class="intent__label">The platform responds</div>
+        <ul class="looking">
+          <li><svg><use href="#i-users"/></svg> People you should meet</li>
+          <li><svg><use href="#i-rocket"/></svg> Startups you should study</li>
+          <li><svg><use href="#i-target"/></svg> Opportunities to apply to</li>
+          <li><svg><use href="#i-calendar"/></svg> Events worth attending</li>
+          <li><svg><use href="#i-bolt"/></svg> Your recommended next steps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reco-grid">
+      <div class="reco reveal" data-d="1">
+        <div class="reco__icon"><svg><use href="#i-users"/></svg></div>
+        <h4>People</h4>
+        <p>Founders, co-founders, mentors and investors matched to your domain and stage.</p>
+      </div>
+      <div class="reco reveal" data-d="2">
+        <div class="reco__icon"><svg><use href="#i-rocket"/></svg></div>
+        <h4>Startups</h4>
+        <p>Similar companies, competitors and adjacent technologies worth learning from.</p>
+      </div>
+      <div class="reco reveal" data-d="3">
+        <div class="reco__icon"><svg><use href="#i-target"/></svg></div>
+        <h4>Opportunities</h4>
+        <p>Hackathons, accelerators, grants and funding you are actually eligible for.</p>
+      </div>
+      <div class="reco reveal" data-d="4">
+        <div class="reco__icon"><svg><use href="#i-book"/></svg></div>
+        <h4>Knowledge</h4>
+        <p>Research, market signals, communities and discussions relevant to the idea.</p>
+      </div>
+      <div class="reco reveal" data-d="5">
+        <div class="reco__icon"><svg><use href="#i-bolt"/></svg></div>
+        <h4>Next steps</h4>
+        <p>A short, ordered plan — what to do this week to move the idea forward.</p>
+      </div>
+    </div>
+
+    <div class="reveal" data-d="2" style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:38px">
+      <p class="small muted" style="margin:0">Need to go deeper than search results?</p>
+      <button class="btn btn--ai btn--sm" data-ai-open><svg><use href="#i-spark"/></svg> Ask AI</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FROM SEARCH TO ACTION ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Differentiator</span>
+      <h2 class="h2">From search to action</h2>
+      <p class="lead">
+        Discovery is only useful if it tells you what to do next. Every STARTVATE search ends with a
+        decision, not a list.
+      </p>
+    </div>
+
+    <div class="action-split">
+      <div class="card card--pad reveal" data-d="1">
+        <div class="tiny muted" style="letter-spacing:.08em;text-transform:uppercase;font-weight:650">You searched</div>
+        <div class="h3" style="margin-top:8px">"AI Agriculture Startup"</div>
+
+        <div class="tiny muted" style="letter-spacing:.08em;text-transform:uppercase;font-weight:650;margin-top:26px">We found</div>
+        <div class="found-grid" data-counters>
+          <div class="found"><div class="n" data-count-to="12">0</div><div class="l">Relevant founders</div></div>
+          <div class="found"><div class="n" data-count-to="8">0</div><div class="l">Potential co-founders</div></div>
+          <div class="found"><div class="n" data-count-to="5">0</div><div class="l">Investors</div></div>
+          <div class="found"><div class="n" data-count-to="7">0</div><div class="l">Upcoming events</div></div>
+          <div class="found"><div class="n" data-count-to="4">0</div><div class="l">Accelerators</div></div>
+          <div class="found"><div class="n" data-count-to="13">0</div><div class="l">Similar startups</div></div>
+        </div>
+
+        <div class="ai-insight" style="margin-top:24px">
+          <div class="ai-insight__h"><svg><use href="#i-spark"/></svg> AI read of your situation</div>
+          <p>Your idea sits in a validated market with active early-stage funding. The gap is execution:
+          you have no technical co-founder listed and no accelerator applications open. Start there.</p>
+        </div>
+      </div>
+
+      <div class="card card--pad reveal" data-d="2" style="background:var(--surface-2)">
+        <div class="tiny muted" style="letter-spacing:.08em;text-transform:uppercase;font-weight:650">Recommended next steps</div>
+        <div class="steps">
+          <div class="step">
+            <span class="step__n"></span>
+            <div><div class="step__t">Connect with relevant agriculture founders</div><div class="step__d">6 founders in your region are open to conversations this month.</div></div>
+            <span class="step__go"><svg><use href="#i-arrow"/></svg></span>
+          </div>
+          <div class="step">
+            <span class="step__n"></span>
+            <div><div class="step__t">Apply to a relevant accelerator</div><div class="step__d">GreenField Accelerator closes in 21 days · 89% eligibility match.</div></div>
+            <span class="step__go"><svg><use href="#i-arrow"/></svg></span>
+          </div>
+          <div class="step">
+            <span class="step__n"></span>
+            <div><div class="step__t">Attend an upcoming AgriTech event</div><div class="step__d">AgriFuture Summit, Hyderabad — 34 matched builders attending.</div></div>
+            <span class="step__go"><svg><use href="#i-arrow"/></svg></span>
+          </div>
+          <div class="step">
+            <span class="step__n"></span>
+            <div><div class="step__t">Validate your idea with similar startups</div><div class="step__d">13 comparable companies — 3 pivoted away from your current model.</div></div>
+            <span class="step__go"><svg><use href="#i-arrow"/></svg></span>
+          </div>
+          <div class="step">
+            <span class="step__n"></span>
+            <div><div class="step__t">Find a technical co-founder</div><div class="step__d">8 ML engineers matched on domain, stage and intent.</div></div>
+            <span class="step__go"><svg><use href="#i-arrow"/></svg></span>
+          </div>
+        </div>
+        <p class="note" style="margin-top:18px"><svg><use href="#i-check"/></svg> Steps re-rank as your profile, stage and progress change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILDER PROFILE ================= -->
+<section class="section section--paper" id="ecosystem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Identity</span>
+      <h2 class="h2">The Builder Profile</h2>
+      <p class="lead">
+        Not a résumé. A profile answers one question: <span class="serif-em">what are you building, and how can
+        people collaborate with you?</span>
+      </p>
+    </div>
+
+    <div class="card profile reveal" data-d="1">
+      <div class="profile__main">
+        <div class="profile__head">
+          <span class="avatar avatar--lg">A</span>
+          <div>
+            <div class="profile__name">Arun Selvaraj</div>
+            <div class="profile__role">Founder · Coimbatore, India · Early stage</div>
+          </div>
+          <span class="badge" style="margin-left:auto"><svg style="width:12px;height:12px"><use href="#i-check"/></svg> Open to connect</span>
+        </div>
+
+        <div class="profile__building">
+          <div class="l">What I'm building</div>
+          <div class="v">An AI-powered agriculture platform that turns field data into crop decisions for smallholder farms.</div>
+        </div>
+
+        <div class="pblock">
+          <h5>Skills</h5>
+          <div class="tagline-row">
+            <span class="chip">AI</span><span class="chip">Product</span><span class="chip">Python</span>
+            <span class="chip">Entrepreneurship</span><span class="chip">Go-to-market</span>
+          </div>
+        </div>
+
+        <div class="pblock">
+          <h5>Interests</h5>
+          <div class="tagline-row">
+            <span class="chip chip--plain">AgriTech</span><span class="chip chip--plain">ClimateTech</span>
+            <span class="chip chip--plain">Rural markets</span><span class="chip chip--plain">Applied ML</span>
+          </div>
+        </div>
+
+        <div class="pblock">
+          <h5>Projects &amp; portfolio</h5>
+          <div class="proj">
+            <span class="proj__ic"><svg><use href="#i-rocket"/></svg></span>
+            <div><div class="t">FarmSense — crop advisory prototype</div><div class="d">Live pilot · 40 farms · 2 districts</div></div>
+          </div>
+          <div class="proj">
+            <span class="proj__ic"><svg><use href="#i-code"/></svg></span>
+            <div><div class="t">Yield model benchmark (open source)</div><div class="d">Python · satellite + soil sensor data</div></div>
+          </div>
+          <div class="proj">
+            <span class="proj__ic"><svg><use href="#i-link"/></svg></span>
+            <div><div class="t">arunbuilds.dev</div><div class="d">Portfolio &amp; build log</div></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile__side">
+        <div class="pblock" style="margin-top:0">
+          <h5>Startup</h5>
+          <div class="card card--pad" style="padding:16px">
+            <div style="display:flex;align-items:center;gap:12px">
+              <span class="startup__logo" style="width:36px;height:36px;font-size:13px">FS</span>
+              <div><div class="startup__n" style="font-size:14.5px">FarmSense AI</div><div class="startup__i">AgriTech · Pre-seed · 3 people</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pblock">
+          <h5>Looking for</h5>
+          <ul class="looking">
+            <li><svg><use href="#i-user-plus"/></svg> Technical co-founder <span class="st">Priority</span></li>
+            <li><svg><use href="#i-cap"/></svg> Mentor · AgriScience <span class="st">Open</span></li>
+            <li><svg><use href="#i-money"/></svg> Pre-seed investor <span class="st">Q3</span></li>
+            <li><svg><use href="#i-users"/></svg> Team member · Android <span class="st">Open</span></li>
+          </ul>
+        </div>
+
+        <div class="pblock">
+          <h5>Ecosystem signals</h5>
+          <div class="kv"><span class="k">Profile match strength</span><span class="v">High</span></div>
+          <div class="kv"><span class="k">Domain</span><span class="v">AI × Agriculture</span></div>
+          <div class="kv"><span class="k">Stage</span><span class="v">Prototype → Pilot</span></div>
+        </div>
+
+        <button class="btn btn--primary btn--block btn--sm" style="margin-top:22px">
+          <svg><use href="#i-plus"/></svg> Connect with Arun
+        </button>
+        <button class="btn btn--ghost btn--block btn--sm" style="margin-top:9px" data-ai-open>
+          <svg><use href="#i-spark"/></svg> Ask AI about this builder
+        </button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILDER FEED ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Community</span>
+      <h2 class="h2">Builder Feed</h2>
+      <p class="lead">Not another social feed. A feed built for building — ideas, launches, progress,
+        co-founder calls, hiring, demos and honest feedback.</p>
+    </div>
+
+    <div class="grid" style="grid-template-columns:1.25fr .85fr;gap:26px" id="feedLayout">
+      <div class="feed">
+        <article class="card post reveal" data-d="1">
+          <div class="post__head">
+            <span class="avatar avatar--c">MK</span>
+            <div><div class="post__who">Meera Krishnan</div><div class="post__meta">ML Engineer · Bengaluru · 2h</div></div>
+            <span class="badge badge--people post__tag">Looking for co-founder</span>
+          </div>
+          <p class="post__body">
+            I've spent three years on computer-vision models for crop disease detection and I'm ready to
+            build a company around it. <b>Looking for a founder with agri distribution experience</b> — someone
+            who knows how produce actually moves from farm to buyer. Prototype and benchmark results in my profile.
+          </p>
+          <div class="post__acts">
+            <button class="pact" data-like><svg><use href="#i-heart"/></svg> <span>148</span></button>
+            <button class="pact"><svg><use href="#i-message"/></svg> 32</button>
+            <button class="pact" data-save><svg><use href="#i-bookmark"/></svg> Save</button>
+            <button class="pact"><svg><use href="#i-share"/></svg> Share</button>
+            <button class="pact pact--connect"><svg><use href="#i-plus"/></svg> Connect</button>
+          </div>
+          <div class="ai-insight">
+            <div class="ai-insight__h"><svg><use href="#i-spark"/></svg> AI Insight</div>
+            <p>Several builders suggested validating the B2B market before building the full product.
+            Two commenters run agri supply chains and offered pilot access.</p>
+          </div>
+        </article>
+
+        <article class="card post reveal" data-d="2">
+          <div class="post__head">
+            <span class="avatar avatar--b">TG</span>
+            <div><div class="post__who">TerraGrid</div><div class="post__meta">Startup · Pune · 6h</div></div>
+            <span class="badge badge--startup post__tag">Product launch</span>
+          </div>
+          <p class="post__body">
+            Shipped v2 of our soil intelligence API today. It now returns nitrogen and moisture forecasts
+            seven days out for 11 crop types. <b>Free tier for student builders and hackathon teams</b> — demo link
+            and docs attached.
+          </p>
+          <div class="post__acts">
+            <button class="pact" data-like><svg><use href="#i-heart"/></svg> <span>312</span></button>
+            <button class="pact"><svg><use href="#i-message"/></svg> 47</button>
+            <button class="pact" data-save><svg><use href="#i-bookmark"/></svg> Save</button>
+            <button class="pact"><svg><use href="#i-share"/></svg> Share</button>
+            <button class="pact pact--connect"><svg><use href="#i-plus"/></svg> Follow</button>
+          </div>
+        </article>
+
+        <article class="card post reveal" data-d="3">
+          <div class="post__head">
+            <span class="avatar avatar--e">SV</span>
+            <div><div class="post__who">Sana Verma</div><div class="post__meta">Student founder · Delhi · 1d</div></div>
+            <span class="badge badge--opp post__tag">Feedback request</span>
+          </div>
+          <p class="post__body">
+            Second-year student, first real idea: a marketplace connecting farmers directly to restaurant
+            buyers. <b>Is this too crowded a space to enter as a student?</b> Genuinely want the hard answer
+            before I spend a semester on it.
+          </p>
+          <div class="post__acts">
+            <button class="pact" data-like><svg><use href="#i-heart"/></svg> <span>96</span></button>
+            <button class="pact"><svg><use href="#i-message"/></svg> 58</button>
+            <button class="pact" data-save><svg><use href="#i-bookmark"/></svg> Save</button>
+            <button class="pact"><svg><use href="#i-share"/></svg> Share</button>
+            <button class="pact pact--connect"><svg><use href="#i-plus"/></svg> Connect</button>
+          </div>
+          <div class="ai-insight">
+            <div class="ai-insight__h"><svg><use href="#i-spark"/></svg> AI Summary of 58 replies</div>
+            <p>Consensus: the space is crowded but logistics remains unsolved regionally. Most replies advise
+            starting with one city and one produce category, and three founders offered to share their failed unit economics.</p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="reveal" data-d="2">
+        <div class="card card--pad" style="position:sticky;top:calc(var(--nav-h) + 20px)">
+          <h4 class="h4">What builders post here</h4>
+          <ul class="looking" style="margin-top:14px">
+            <li><svg><use href="#i-bulb"/></svg> Startup ideas</li>
+            <li><svg><use href="#i-rocket"/></svg> Product launches</li>
+            <li><svg><use href="#i-trend"/></svg> Progress updates</li>
+            <li><svg><use href="#i-user-plus"/></svg> Looking-for-co-founder posts</li>
+            <li><svg><use href="#i-briefcase"/></svg> Hiring requirements</li>
+            <li><svg><use href="#i-message"/></svg> Questions &amp; feedback requests</li>
+            <li><svg><use href="#i-code"/></svg> Project demos</li>
+            <li><svg><use href="#i-target"/></svg> Opportunities worth sharing</li>
+          </ul>
+          <div class="ai-insight" style="margin-top:18px">
+            <div class="ai-insight__h"><svg><use href="#i-spark"/></svg> Why AI sits on the feed</div>
+            <p>Long comment threads get summarised into what was actually decided — so the signal in a
+            community conversation survives past the day it happened.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPPORTUNITY DISCOVERY ================= -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Opportunities</span>
+      <h2 class="h2">Never miss your next opportunity</h2>
+      <p class="lead">
+        Hackathons, competitions, accelerators, incubators, grants, funding, conferences, startup jobs and
+        fellowships — matched to your domain, stage and eligibility instead of your search history.
+      </p>
+    </div>
+
+    <div class="filters reveal" data-d="1" id="oppFilters">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="Hackathon">Hackathons</button>
+      <button class="filter" data-filter="Competition">Competitions</button>
+      <button class="filter" data-filter="Accelerator">Accelerators</button>
+      <button class="filter" data-filter="Incubator">Incubators</button>
+      <button class="filter" data-filter="Grant">Grants</button>
+      <button class="filter" data-filter="Funding">Funding</button>
+      <button class="filter" data-filter="Conference">Conferences</button>
+      <button class="filter" data-filter="Job">Startup jobs</button>
+      <button class="filter" data-filter="Fellowship">Fellowships</button>
+    </div>
+
+    <div class="grid g-3" id="oppGrid"></div>
+
+    <p class="note reveal" style="margin-top:22px"><svg><use href="#i-spark"/></svg>
+      Match % is generated from your profile, stage, skills and eligibility — not from popularity.</p>
+  </div>
+</section>
+
+<!-- ================= NETWORKING & MATCHING ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Matching</span>
+      <h2 class="h2">Meet the right people</h2>
+      <p class="lead">
+        Random networking wastes everyone's time. STARTVATE matches on skills, interests, startup domain,
+        goals, experience, location, stage and — most importantly — what each person is looking for.
+      </p>
+    </div>
+
+    <div class="match-layout">
+      <div class="graph-card reveal" data-d="1">
+        <svg class="graph" viewBox="0 0 420 360" role="img" aria-label="Network graph showing a builder connected to matched co-founders, mentors and investors">
+          <g class="edges">
+            <path class="edge" d="M210 180 L92 84"/><path class="edge" d="M210 180 L330 96"/>
+            <path class="edge" d="M210 180 L70 214"/><path class="edge" d="M210 180 L344 236"/>
+            <path class="edge" d="M210 180 L150 300"/><path class="edge" d="M210 180 L286 306"/>
+          </g>
+          <circle class="pulse" cx="210" cy="180" r="26"/>
+          <g>
+            <circle class="node-hub" cx="210" cy="180" r="26"/>
+            <text x="210" y="184" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">YOU</text>
+          </g>
+          <g>
+            <rect class="node-cbox nodebox" x="26" y="62" width="132" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="40" y="82" font-weight="700">Meera K. · 92%</text>
+            <text x="40" y="96" fill="#7A746A" font-size="8">Potential co-founder</text>
+          </g>
+          <g>
+            <rect class="nodebox" x="266" y="74" width="132" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="280" y="94" font-weight="700">Dr. Rohan P. · 87%</text>
+            <text x="280" y="108" fill="#7A746A" font-size="8">Potential mentor</text>
+          </g>
+          <g>
+            <rect class="nodebox" x="4" y="192" width="132" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="18" y="212" font-weight="700">Nila Capital · 81%</text>
+            <text x="18" y="226" fill="#7A746A" font-size="8">Potential investor</text>
+          </g>
+          <g>
+            <rect class="nodebox" x="280" y="214" width="132" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="294" y="234" font-weight="700">Kabir S. · 78%</text>
+            <text x="294" y="248" fill="#7A746A" font-size="8">Team member · Android</text>
+          </g>
+          <g>
+            <rect class="nodebox" x="84" y="278" width="132" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="98" y="298" font-weight="700">AgriTech Builders</text>
+            <text x="98" y="312" fill="#7A746A" font-size="8">Community · 4.2k</text>
+          </g>
+          <g>
+            <rect class="nodebox" x="236" y="284" width="150" height="44" rx="12" fill="#fff" stroke="rgba(26,25,23,.15)"/>
+            <text x="250" y="304" font-weight="700">GreenField Accelerator</text>
+            <text x="250" y="318" fill="#7A746A" font-size="8">Opportunity · 89%</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="grid" style="gap:12px">
+        <div class="card mcard reveal" data-d="1">
+          <span class="avatar avatar--c">MK</span>
+          <div class="mcard__b">
+            <div class="mcard__n">Meera Krishnan</div>
+            <div class="mcard__r">Looking for: Co-founder · AI + Agriculture</div>
+            <div class="mcard__tags"><span class="chip">ML</span><span class="chip">Python</span><span class="chip">Product</span></div>
+          </div>
+          <div class="mcard__side">
+            <div class="match" data-match="92">92%<small>Co-founder</small></div>
+            <button class="btn btn--primary btn--xs">Connect</button>
+          </div>
+        </div>
+
+        <div class="card mcard reveal" data-d="2">
+          <span class="avatar avatar--b">RP</span>
+          <div class="mcard__b">
+            <div class="mcard__n">Dr. Rohan Patel</div>
+            <div class="mcard__r">Mentoring: Agri-science &amp; field trials</div>
+            <div class="mcard__tags"><span class="chip">AgriScience</span><span class="chip">Pilots</span><span class="chip">Research</span></div>
+          </div>
+          <div class="mcard__side">
+            <div class="match" data-match="87">87%<small>Mentor</small></div>
+            <button class="btn btn--ghost btn--xs">Connect</button>
+          </div>
+        </div>
+
+        <div class="card mcard reveal" data-d="3">
+          <span class="avatar avatar--d">NC</span>
+          <div class="mcard__b">
+            <div class="mcard__n">Nila Capital</div>
+            <div class="mcard__r">Investing: Pre-seed · AgriTech, ClimateTech</div>
+            <div class="mcard__tags"><span class="chip">₹50L–₹3Cr</span><span class="chip">India</span><span class="chip">Pre-seed</span></div>
+          </div>
+          <div class="mcard__side">
+            <div class="match" data-match="81">81%<small>Investor</small></div>
+            <button class="btn btn--ghost btn--xs">Connect</button>
+          </div>
+        </div>
+
+        <div class="card mcard reveal" data-d="4">
+          <span class="avatar avatar--e">KS</span>
+          <div class="mcard__b">
+            <div class="mcard__n">Kabir Shah</div>
+            <div class="mcard__r">Looking for: Founding team to join</div>
+            <div class="mcard__tags"><span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">Offline-first</span></div>
+          </div>
+          <div class="mcard__side">
+            <div class="match" data-match="78">78%<small>Team member</small></div>
+            <button class="btn btn--ghost btn--xs">Connect</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STARTUP DISCOVERY ================= -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Startups</span>
+      <h2 class="h2">Discover what others are building</h2>
+      <p class="lead">
+        A living map of the ecosystem — who is building what, at which stage, with which technology,
+        in which market. Study your space before you enter it.
+      </p>
+    </div>
+
+    <div class="filters reveal" data-d="1" id="startupFilters">
+      <button class="filter is-active" data-cat="all">All</button>
+      <button class="filter" data-cat="AI">AI</button>
+      <button class="filter" data-cat="FinTech">FinTech</button>
+      <button class="filter" data-cat="HealthTech">HealthTech</button>
+      <button class="filter" data-cat="AgriTech">AgriTech</button>
+      <button class="filter" data-cat="ClimateTech">ClimateTech</button>
+      <button class="filter" data-cat="SaaS">SaaS</button>
+      <button class="filter" data-cat="DeepTech">DeepTech</button>
+      <button class="filter" data-cat="EdTech">EdTech</button>
+    </div>
+
+    <div class="grid g-3" id="startupGrid"></div>
+  </div>
+</section>
+
+<!-- ================= NEWS & KNOWLEDGE ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:46px;align-items:start" id="knowLayout">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:26px">
+          <span class="eyebrow"><i class="dot"></i> Knowledge</span>
+          <h2 class="h2">Stay ahead</h2>
+          <p class="lead">Tech, startup and funding news filtered by what you're actually building — not by what's trending globally.</p>
+        </div>
+
+        <div class="digest reveal" data-d="1">
+          <span class="ai-orb"><svg><use href="#i-spark"/></svg></span>
+          <div>
+            <div class="h4" style="font-size:15px">5 AI + Agriculture developments you should know this week</div>
+            <p class="small muted" style="margin-top:4px">Personalised digest · generated from your domain, stage and saved interests</p>
+          </div>
+        </div>
+
+        <div class="news reveal" data-d="2">
+          <div class="news__item"><span class="news__k">Funding</span><span class="news__t">AgriTech seed rounds up 28% year over year across South Asia</span><span class="news__m">2h</span></div>
+          <div class="news__item"><span class="news__k">AI news</span><span class="news__t">New open crop-disease dataset released with 1.2M labelled field images</span><span class="news__m">6h</span></div>
+          <div class="news__item"><span class="news__k">Launch</span><span class="news__t">TerraGrid ships soil forecasting API with a free student tier</span><span class="news__m">1d</span></div>
+          <div class="news__item"><span class="news__k">Market trend</span><span class="news__t">Buyers shift from hardware sensors to satellite-first yield models</span><span class="news__m">2d</span></div>
+          <div class="news__item"><span class="news__k">Research</span><span class="news__t">Field study: advisory apps raised smallholder yields 11% over two seasons</span><span class="news__m">3d</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-head reveal" style="margin-bottom:26px">
+          <span class="eyebrow"><i class="dot"></i> Communities</span>
+          <h2 class="h2">Find your tribe</h2>
+          <p class="lead">Join the rooms where your kind of work is discussed. Share resources, ask hard questions, find collaborators.</p>
+        </div>
+
+        <div class="grid g-2" style="gap:12px">
+          <div class="card tribe reveal" data-d="1">
+            <div class="tribe__t">AgriTech Builders</div>
+            <div class="tribe__m">4,240 members · very active</div>
+            <div class="tribe__foot">
+              <div class="stack"><span class="avatar">A</span><span class="avatar avatar--b">M</span><span class="avatar avatar--c">R</span><span class="avatar avatar--d">S</span></div>
+              <button class="btn btn--ghost btn--xs">Join</button>
+            </div>
+          </div>
+          <div class="card tribe reveal" data-d="2">
+            <div class="tribe__t">Applied AI</div>
+            <div class="tribe__m">18,900 members · very active</div>
+            <div class="tribe__foot">
+              <div class="stack"><span class="avatar avatar--c">K</span><span class="avatar avatar--e">T</span><span class="avatar">N</span></div>
+              <button class="btn btn--ghost btn--xs">Join</button>
+            </div>
+          </div>
+          <div class="card tribe reveal" data-d="3">
+            <div class="tribe__t">Student Founders</div>
+            <div class="tribe__m">9,100 members · active</div>
+            <div class="tribe__foot">
+              <div class="stack"><span class="avatar avatar--d">S</span><span class="avatar avatar--b">V</span><span class="avatar avatar--c">J</span></div>
+              <button class="btn btn--ghost btn--xs">Join</button>
+            </div>
+          </div>
+          <div class="card tribe reveal" data-d="4">
+            <div class="tribe__t">SaaS &amp; Product</div>
+            <div class="tribe__m">12,600 members · active</div>
+            <div class="tribe__foot">
+              <div class="stack"><span class="avatar avatar--e">P</span><span class="avatar">L</span><span class="avatar avatar--b">D</span></div>
+              <button class="btn btn--ghost btn--xs">Join</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tagline-row reveal" data-d="5" style="margin-top:14px">
+          <span class="chip">Developers</span><span class="chip">Designers</span><span class="chip">Founders</span>
+          <span class="chip">Marketing</span><span class="chip">FinTech</span><span class="chip">ClimateTech</span>
+          <span class="chip">DeepTech</span><span class="chip">+ 40 more</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY NOT LINKEDIN / X / REDDIT ================= -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow"><i class="dot"></i> Positioning</span>
+      <h2 class="h2">The internet has the information.<br />We connect the dots.</h2>
+      <p class="lead">
+        These platforms are genuinely good at what they do — and founders will keep using all of them.
+        The problem isn't any one platform. It's that the startup journey is split across every one of them.
+      </p>
+    </div>
+
+    <div class="compare">
+      <div class="cmp reveal" data-d="1"><h4>LinkedIn</h4><p>Professional networking and credentials.</p></div>
+      <div class="cmp reveal" data-d="2"><h4>X</h4><p>Ideas, conversation and real-time signal.</p></div>
+      <div class="cmp reveal" data-d="3"><h4>Reddit</h4><p>Communities and candid discussion.</p></div>
+      <div class="cmp reveal" data-d="4"><h4>YC &amp; accelerators</h4><p>Programs and founder opportunities.</p></div>
+
+      <div class="cmp cmp__us reveal" data-d="5">
+        <div>
+          <h4>STARTVATE</h4>
+          <p>We don't replace these platforms. We connect the fragmented startup journey around one thing: your intent.</p>
+        </div>
+        <div class="cmp__eq">
+          <span>People</span><i>+</i><span>Opportunities</span><i>+</i><span>Discovery</span><i>+</i><span>AI</span><i>+</i><span class="hi">Action</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE BIGGER VISION ================= -->
+<section class="section" id="vision">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow"><i class="dot"></i> The bigger vision</span>
+      <h2 class="h2">From idea to company</h2>
+      <p class="lead">
+        Discovery is the entry point, not the destination. The same graph that helps someone find a
+        co-founder on day one helps them find funding in year two.
+      </p>
+    </div>
+
+    <div class="journey reveal" data-d="1" id="journey">
+      <span class="jstep" data-j><i></i> Idea</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Discover</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Connect</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Validate</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Build</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Launch</span><span class="jsep">→</span>
+      <span class="jstep" data-j><i></i> Grow</span>
+    </div>
+
+    <div class="story">
+      <div class="story__i reveal" data-d="1"><div class="n">Step 01</div><div class="t">A student has an idea</div><div class="d">Second year, no network, no funding — just a conviction about farm data.</div></div>
+      <div class="story__i reveal" data-d="2"><div class="n">Step 02</div><div class="t">Finds a co-founder</div><div class="d">Matched with an ML engineer looking for exactly this domain.</div></div>
+      <div class="story__i reveal" data-d="3"><div class="n">Step 03</div><div class="t">Finds a mentor</div><div class="d">An agri-science researcher who has run field trials for a decade.</div></div>
+      <div class="story__i reveal" data-d="1"><div class="n">Step 04</div><div class="t">Discovers a hackathon</div><div class="d">Builds the first working prototype in 48 hours with the new team.</div></div>
+      <div class="story__i reveal" data-d="2"><div class="n">Step 05</div><div class="t">Validates the idea</div><div class="d">Studies 13 similar startups, talks to 40 farms, narrows the wedge.</div></div>
+      <div class="story__i reveal" data-d="3"><div class="n">Step 06</div><div class="t">Joins an accelerator</div><div class="d">Applies through a matched opportunity with 89% eligibility.</div></div>
+      <div class="story__i reveal" data-d="1"><div class="n">Step 07</div><div class="t">Finds funding</div><div class="d">Meets pre-seed investors already active in the domain.</div></div>
+      <div class="story__i reveal" data-d="2"><div class="n">Step 08</div><div class="t">Builds the product</div><div class="d">Hires the first two engineers from the same builder network.</div></div>
+      <div class="story__i reveal" data-d="3"><div class="n">Step 09</div><div class="t">Launches the startup</div><div class="d">And becomes the person the next student founder gets matched with.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHO IS IT FOR ================= -->
+<section class="section section--paper" id="about">
+  <div class="wrap">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow"><i class="dot"></i> Audience</span>
+      <h2 class="h2">Who is it for?</h2>
+      <p class="lead">Everyone on both sides of the startup equation — the people building, and the people who exist to back them.</p>
+    </div>
+
+    <div class="grid g-3">
+      <div class="card card--hover persona reveal" data-d="1">
+        <div class="persona__ic"><svg><use href="#i-rocket"/></svg></div>
+        <h4>Founders</h4><p>Find people, opportunities, resources and support without living in six tabs.</p>
+      </div>
+      <div class="card card--hover persona reveal" data-d="2">
+        <div class="persona__ic"><svg><use href="#i-bulb"/></svg></div>
+        <h4>Aspiring entrepreneurs</h4><p>Turn an idea into an actionable startup plan with a clear first step.</p>
+      </div>
+      <div class="card card--hover persona reveal" data-d="3">
+        <div class="persona__ic"><svg><use href="#i-code"/></svg></div>
+        <h4>Developers &amp; designers</h4><p>Find projects and startup teams worth building with — at the stage you want to join.</p>
+      </div>
+      <div class="card card--hover persona reveal" data-d="4">
+        <div class="persona__ic"><svg><use href="#i-cap"/></svg></div>
+        <h4>Mentors</h4><p>Discover founders who need your specific expertise, instead of waiting to be found.</p>
+      </div>
+      <div class="card card--hover persona reveal" data-d="5">
+        <div class="persona__ic"><svg><use href="#i-money"/></svg></div>
+        <h4>Investors</h4><p>Discover emerging founders and startups early, with real build signal attached.</p>
+      </div>
+      <div class="card card--hover persona reveal" data-d="6">
+        <div class="persona__ic"><svg><use href="#i-users"/></svg></div>
+        <h4>Students</h4><p>Find hackathons, communities, mentors and the startup opportunities you're eligible for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLYWHEEL ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Why it compounds</span>
+      <h2 class="h2">The ecosystem flywheel</h2>
+      <p class="lead">Every new builder makes the graph denser, and a denser graph makes every recommendation better. The product gets more valuable as it grows, not more crowded.</p>
+    </div>
+
+    <div class="flywheel">
+      <div class="reveal" data-d="1">
+        <svg class="wheel" viewBox="0 0 460 460" role="img" aria-label="Ecosystem flywheel diagram">
+          <defs>
+            <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#D97757"/><stop offset="100%" stop-color="#A64E2E"/>
+            </linearGradient>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" class="arrowhead" fill="#D97757"/>
+            </marker>
+          </defs>
+
+          <circle class="orbit" cx="230" cy="230" r="168"/>
+          <g fill="none" stroke="#D97757" stroke-width="1.6" opacity=".55" marker-end="url(#ah)">
+            <path d="M300 96 A168 168 0 0 1 386 196"/>
+            <path d="M396 268 A168 168 0 0 1 312 366"/>
+            <path d="M240 398 A168 168 0 0 1 118 350"/>
+            <path d="M72 292 A168 168 0 0 1 66 176"/>
+            <path d="M92 116 A168 168 0 0 1 206 64"/>
+          </g>
+
+          <circle class="core" cx="230" cy="230" r="62"/>
+          <text class="core-t" x="230" y="224" text-anchor="middle">STARTVATE</text>
+          <text class="core-t" x="230" y="243" text-anchor="middle" font-size="9.5" opacity=".8">ecosystem graph</text>
+
+          <g>
+            <rect class="nodebox" x="164" y="18" width="132" height="38" rx="12"/><text x="230" y="42" text-anchor="middle">More builders</text>
+            <rect class="nodebox" x="316" y="128" width="140" height="38" rx="12"/><text x="386" y="152" text-anchor="middle">More startups &amp; ideas</text>
+            <rect class="nodebox" x="312" y="292" width="148" height="38" rx="12"/><text x="386" y="316" text-anchor="middle">More opportunities</text>
+            <rect class="nodebox" x="150" y="404" width="160" height="38" rx="12"/><text x="230" y="428" text-anchor="middle">Better AI recommendations</text>
+            <rect class="nodebox" x="0" y="292" width="146" height="38" rx="12"/><text x="73" y="316" text-anchor="middle">More connections</text>
+            <rect class="nodebox" x="6" y="128" width="132" height="38" rx="12"/><text x="72" y="152" text-anchor="middle">More value</text>
+          </g>
+        </svg>
+      </div>
+
+      <div>
+        <ul class="fly-list">
+          <li class="reveal" data-d="1"><span class="n">1</span><div><b>More builders</b> join to find people and opportunities around their idea.</div></li>
+          <li class="reveal" data-d="2"><span class="n">2</span><div><b>More startups and ideas</b> get mapped, making the ecosystem picture sharper.</div></li>
+          <li class="reveal" data-d="3"><span class="n">3</span><div><b>More opportunities and data</b> flow in — organisers and investors follow the builders.</div></li>
+          <li class="reveal" data-d="4"><span class="n">4</span><div><b>Better AI recommendations</b> emerge from a denser, more connected graph.</div></li>
+          <li class="reveal" data-d="5"><span class="n">5</span><div><b>More successful connections</b> — co-founders found, applications won, funding closed.</div></li>
+          <li class="reveal" data-d="6"><span class="n">6</span><div><b>More value</b> per user, which brings the next wave of builders in.</div></li>
+        </ul>
+        <div class="card card--pad reveal" data-d="6" style="margin-top:22px;background:var(--surface-2)">
+          <p class="small" style="color:var(--ink-2)">
+            The defensibility isn't the interface — it's the graph. Intent data, match outcomes and
+            ecosystem coverage compound into recommendations that a general-purpose search or a
+            generic social network structurally cannot produce.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROADMAP + BUSINESS MODEL ================= -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><i class="dot"></i> Roadmap</span>
+      <h2 class="h2">How the platform expands</h2>
+      <p class="lead">Each phase makes the next one obvious. We start where the pain is sharpest — discovery — and grow into the workflow around it.</p>
+    </div>
+
+    <div class="roadmap">
+      <div class="phase is-now reveal" data-d="1">
+        <div class="phase__k">Phase 1</div><h4>Discover</h4>
+        <p>Search, startup discovery, opportunities and builder profiles.</p>
+        <span class="badge">In build</span>
+      </div>
+      <div class="phase reveal" data-d="2">
+        <div class="phase__k">Phase 2</div><h4>Connect</h4>
+        <p>Co-founder matching, networking and communities.</p>
+      </div>
+      <div class="phase reveal" data-d="3">
+        <div class="phase__k">Phase 3</div><h4>Intelligence</h4>
+        <p>AI recommendations, personalised next steps and ecosystem insights.</p>
+      </div>
+      <div class="phase reveal" data-d="4">
+        <div class="phase__k">Phase 4</div><h4>Build</h4>
+        <p>Team collaboration, startup workspace and project management.</p>
+      </div>
+      <div class="phase reveal" data-d="5">
+        <div class="phase__k">Phase 5</div><h4>Ecosystem</h4>
+        <p>Investors, accelerators and a global startup network.</p>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns:.85fr 1.15fr;gap:36px;margin-top:78px;align-items:center" id="revLayout">
+      <div class="reveal">
+        <span class="eyebrow"><i class="dot"></i> Business model</span>
+        <h3 class="h2" style="font-size:clamp(1.6rem,2.6vw,2.2rem);margin:16px 0 14px">A platform with multiple revenue opportunities</h3>
+        <p class="lead" style="font-size:1rem">
+          Monetisation follows the network, not the other way around. Discovery stays free and open;
+          value capture sits where the ecosystem already spends money.
+        </p>
+      </div>
+      <div class="grid g-2" style="gap:10px">
+        <div class="rev reveal" data-d="1"><i></i> Premium memberships</div>
+        <div class="rev reveal" data-d="1"><i></i> Advanced AI features</div>
+        <div class="rev reveal" data-d="2"><i></i> Startup promotion</div>
+        <div class="rev reveal" data-d="2"><i></i> Sponsored opportunities</div>
+        <div class="rev reveal" data-d="3"><i></i> Event partnerships</div>
+        <div class="rev reveal" data-d="3"><i></i> Accelerator partnerships</div>
+        <div class="rev reveal" data-d="4"><i></i> Investor discovery tools</div>
+        <div class="rev reveal" data-d="4"><i></i> Talent matching</div>
+        <div class="rev reveal" data-d="5" style="grid-column:span 2"><i></i> Enterprise ecosystem solutions for universities, governments and corporates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CORE DIFFERENTIATOR ================= -->
+<section class="section">
+  <div class="wrap diff-quote reveal">
+    <p class="l1">Most platforms help you find information.</p>
+    <p class="l2">We help you figure out <span class="serif-em brand-text">what to do with it</span>.</p>
+
+    <div class="equation">
+      <span class="eq-node reveal" data-d="1">Discovery</span><span class="op">+</span>
+      <span class="eq-node reveal" data-d="2">Networking</span><span class="op">+</span>
+      <span class="eq-node reveal" data-d="3">Opportunities</span><span class="op">+</span>
+      <span class="eq-node reveal" data-d="4">AI intelligence</span><span class="op">=</span>
+      <span class="eq-node is-final reveal" data-d="5">Action</span>
+    </div>
+
+    <p class="lead" style="max-width:62ch;margin:38px auto 0">
+      One place to discover who to meet, what to explore, and what to do next.
+      <span class="serif-em">We are not building another social network — we are building the operating layer for the startup ecosystem.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section section--tight" id="waitlist">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="eyebrow"><i class="dot"></i> Early access</span>
+      <h2 class="h2">Your idea is only the beginning.</h2>
+      <p class="lead">Find the people, opportunities, and next steps to turn your idea into something real.</p>
+
+      <form class="waitlist" id="waitlistForm" novalidate>
+        <input type="email" id="waitlistEmail" placeholder="you@company.com" aria-label="Email address" autocomplete="email" required />
+        <button class="btn btn--primary" id="waitlistSubmit" type="submit">
+          <span class="btn__label">Join the Ecosystem</span>
+          <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          <span class="btn__spin" aria-hidden="true"></span>
+        </button>
+        <a class="btn btn--ghost" href="#product" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff">Explore the Platform</a>
+      </form>
+
+      <p class="cta__note">No spam. Early builders get first access and help shape what we ship.</p>
+      <p class="cta__msg" id="waitlistMsg" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#D97757"/>
+            <path d="M16 6.5l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="#fff"/>
+          </svg>
+          <span class="brand__name">STARTVATE</span>
+        </a>
+        <p class="footer__about">
+          The discovery and networking layer for the startup ecosystem. One place to discover who to
+          meet, what to explore, and what to do next.
+        </p>
+      </div>
+      <div>
+        <h6>Product</h6>
+        <ul>
+          <li><a href="#product">Search</a></li>
+          <li><a href="#how">AI intelligence</a></li>
+          <li><a href="#ecosystem">Builder profile</a></li>
+          <li><a href="#ecosystem">Opportunities</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Ecosystem</h6>
+        <ul>
+          <li><a href="#ecosystem">Builder feed</a></li>
+          <li><a href="#ecosystem">Matching</a></li>
+          <li><a href="#ecosystem">Startups</a></li>
+          <li><a href="#ecosystem">Communities</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <ul>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#about">Who it's for</a></li>
+          <li><a href="#waitlist">Join waitlist</a></li>
+          <li><a href="#top">Back to top</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>© <span id="year">2026</span> STARTVATE. Building the operating layer for the startup ecosystem.</span>
+      <span>All product data shown on this page is illustrative.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= AI ASSISTANT ================= -->
+<button class="ai-fab" id="aiFab" data-ai-open aria-label="Open AI assistant">
+  <span class="ai-orb"><svg><use href="#i-spark"/></svg></span> Ask AI
+</button>
+
+<aside class="ai-panel" id="aiPanel" role="dialog" aria-label="STARTVATE AI assistant" aria-modal="false">
+  <div class="ai-panel__head">
+    <span class="ai-orb"><svg><use href="#i-spark"/></svg></span>
+    <div>
+      <div class="h4">STARTVATE AI</div>
+      <div class="tiny">Ecosystem intelligence · demo</div>
+    </div>
+    <button class="ai-panel__close" id="aiClose" aria-label="Close assistant"><svg style="width:16px;height:16px"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="ai-log" id="aiLog"></div>
+  <div class="ai-panel__foot">
+    <div class="ai-prompts" id="aiPrompts">
+      <button data-p="How do I find a technical co-founder?">Find a co-founder</button>
+      <button data-p="Which accelerators should I apply to?">Which accelerators?</button>
+      <button data-p="How do I validate my idea?">Validate my idea</button>
+      <button data-p="What should I do this week?">My next step</button>
+    </div>
+    <form class="ai-input" id="aiForm">
+      <input id="aiInput" type="text" placeholder="Ask about people, opportunities, next steps…" aria-label="Ask the AI assistant" />
+      <button class="ai-send" type="submit" aria-label="Send"><svg><use href="#i-send"/></svg></button>
+    </form>
+  </div>
+</aside>
+
+
+<script src="assets/js/vendor/supabase.js"></script>
+<script src="assets/js/supabase-config.js"></script>
+<script src="assets/js/waitlist.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

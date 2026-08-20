@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Local overrides of the Supabase config, if you ever add one.
+assets/js/supabase-config.local.js
