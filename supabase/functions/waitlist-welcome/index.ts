@@ -60,84 +60,125 @@ const textBody = () =>
 
 const htmlBody = () => `<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>${SUBJECT}</title></head>
-<body style="margin:0;padding:0;background:#FAF9F5;">
-  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Welcome to STARTVATE — We're launching soon. Early builders get priority access!</div>
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FAF9F5;padding:32px 16px;">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>${SUBJECT}</title>
+  <!--[if !mso]><!-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <!--<![endif]-->
+</head>
+<body style="margin:0;padding:0;background:#FAF9F5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Welcome to STARTVATE! We're building the discovery layer for the startup ecosystem — and getting ready to launch soon.</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FAF9F5;padding:40px 16px;">
     <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#FFFFFF;border:1px solid rgba(26,25,23,.09);border-radius:18px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#FFFFFF;border:1px solid rgba(26,25,23,.09);border-radius:20px;box-shadow:0 4px 20px -4px rgba(26,25,23,.05);overflow:hidden;">
 
         <!-- Brand Header -->
-        <tr><td style="padding:30px 34px 0;">
+        <tr><td style="padding:32px 36px 0;">
           <table role="presentation" cellpadding="0" cellspacing="0"><tr>
             <td style="padding-right:10px;">
-              <div style="width:32px;height:32px;border-radius:9px;background:#D97757;color:#fff;font-size:18px;line-height:32px;text-align:center;font-weight:700;">&#10022;</div>
+              <table role="presentation" cellpadding="0" cellspacing="0" style="background:#D97757;border-radius:10px;width:34px;height:34px;">
+                <tr><td align="center" valign="middle" style="color:#fff;font-size:20px;line-height:34px;font-weight:700;">&#10022;</td></tr>
+              </table>
             </td>
-            <td style="font-size:18px;font-weight:700;letter-spacing:-.03em;color:#1A1917;">STARTVATE</td>
+            <td style="font-size:19px;font-weight:750;letter-spacing:-.03em;color:#1A1917;">STARTVATE</td>
           </tr></table>
         </td></tr>
 
-        <!-- Greeting & Hero -->
-        <tr><td style="padding:26px 34px 0;">
-          <div style="display:inline-block;padding:6px 14px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">&#10024; Launching Soon</div>
-          <h1 style="margin:18px 0 0;font-size:28px;line-height:1.2;letter-spacing:-.03em;color:#1A1917;font-weight:600;">Welcome to STARTVATE!</h1>
+        <!-- Greeting & Hero Headline -->
+        <tr><td style="padding:24px 36px 0;">
+          <div style="display:inline-block;padding:6px 14px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">
+            <span style="color:#D97757;font-size:13px;vertical-align:-1px;">&#10022;</span> Early Access &middot; Launching Soon
+          </div>
+          <h1 style="margin:18px 0 0;font-size:30px;line-height:1.15;letter-spacing:-.035em;color:#1A1917;font-weight:700;">
+            Build what's next.<br />
+            Find who's <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;color:#D97757;">building it</span> with you.
+          </h1>
           <p style="margin:14px 0 0;font-size:15.5px;line-height:1.62;color:#4A463F;">
-            Thanks for joining our early-access waitlist. We are putting the final touches on the platform and <strong>getting ready to launch soon</strong>.
+            Welcome aboard! Thanks for joining the early-access waitlist. We are putting the final touches on STARTVATE and <strong>getting ready to launch soon</strong>.
           </p>
         </td></tr>
 
         <!-- Highlight Banner -->
-        <tr><td style="padding:24px 34px 0;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FDF9F6;border:1px solid #F7E2D8;border-radius:12px;">
-            <tr><td style="padding:18px 20px;">
-              <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#A64E2E;">What to expect</div>
-              <p style="margin:8px 0 0;font-size:14.5px;line-height:1.6;color:#4A463F;">
-                One intelligent ecosystem for discovering founders, startups, opportunities, and the next step to turn an idea into a company. Describe what you're building, and we'll bring back the people, opportunities, and intelligence tailored for you.
+        <tr><td style="padding:22px 36px 0;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FEF9F6;border:1px solid #F7E2D8;border-radius:14px;">
+            <tr><td style="padding:18px 22px;">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A64E2E;margin-bottom:6px;">The Discovery Layer For Startups</div>
+              <p style="margin:0;font-size:14.5px;line-height:1.58;color:#4A463F;">
+                One intelligent platform where you describe what you're building, and we instantly bring back the people to meet, startups to study, opportunities to apply for, and the next steps to take.
               </p>
             </td></tr>
           </table>
         </td></tr>
 
-        <!-- Next Steps -->
-        <tr><td style="padding:26px 34px 0;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#7A746A;">What happens next</div>
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px;">
-            ${[
-              ['1', 'Priority Early Access', 'You will receive an exclusive invite before we open the platform to the public.'],
-              ['2', 'Launch Announcement', 'We will notify you the moment the discovery layer goes live.'],
-              ['3', 'Zero Spam', 'We only reach out with milestone updates and your personal access key.'],
-            ]
-              .map(
-                ([n, t, d]) => `<tr><td style="padding-bottom:14px;">
-              <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-                <td valign="top" style="width:26px;">
-                  <div style="width:22px;height:22px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11px;font-weight:700;line-height:22px;text-align:center;">${n}</div>
-                </td>
-                <td style="padding-left:12px;">
-                  <div style="font-size:14.5px;font-weight:600;color:#1A1917;letter-spacing:-.01em;">${t}</div>
-                  <div style="font-size:13.5px;color:#7A746A;line-height:1.5;margin-top:2px;">${d}</div>
-                </td>
-              </tr></table>
-            </td></tr>`,
-              )
-              .join('')}
+        <!-- What You Get Section -->
+        <tr><td style="padding:24px 36px 0;">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#7A746A;margin-bottom:12px;">What you get with STARTVATE</div>
+          
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;background:#FCFBF8;border:1px solid rgba(26,25,23,.06);border-radius:12px;">
+            <tr>
+              <td valign="top" style="padding:12px 14px;width:32px;">
+                <div style="width:28px;height:28px;border-radius:8px;background:#FDF2EC;color:#D97757;text-align:center;line-height:28px;font-size:14px;">&#128101;</div>
+              </td>
+              <td valign="middle" style="padding:12px 16px 12px 2px;">
+                <div style="font-size:14px;font-weight:600;color:#1A1917;">People &amp; Co-founders</div>
+                <div style="font-size:13px;color:#7A746A;margin-top:2px;">Intent-matched founders, technical co-founders, and mentors in your space.</div>
+              </td>
+            </tr>
+          </table>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;background:#FCFBF8;border:1px solid rgba(26,25,23,.06);border-radius:12px;">
+            <tr>
+              <td valign="top" style="padding:12px 14px;width:32px;">
+                <div style="width:28px;height:28px;border-radius:8px;background:#FDF2EC;color:#D97757;text-align:center;line-height:28px;font-size:14px;">&#127919;</div>
+              </td>
+              <td valign="middle" style="padding:12px 16px 12px 2px;">
+                <div style="font-size:14px;font-weight:600;color:#1A1917;">Opportunities &amp; Funding</div>
+                <div style="font-size:13px;color:#7A746A;margin-top:2px;">Curated hackathons, grants, incubators, and investors ranked by match score.</div>
+              </td>
+            </tr>
+          </table>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FCFBF8;border:1px solid rgba(26,25,23,.06);border-radius:12px;">
+            <tr>
+              <td valign="top" style="padding:12px 14px;width:32px;">
+                <div style="width:28px;height:28px;border-radius:8px;background:#FDF2EC;color:#D97757;text-align:center;line-height:28px;font-size:14px;">&#10024;</div>
+              </td>
+              <td valign="middle" style="padding:12px 16px 12px 2px;">
+                <div style="font-size:14px;font-weight:600;color:#1A1917;">AI-Recommended Next Steps</div>
+                <div style="font-size:13px;color:#7A746A;margin-top:2px;">Actionable milestones so you always know what to validate next.</div>
+              </td>
+            </tr>
           </table>
         </td></tr>
 
-        <!-- Community Callout -->
-        <tr><td style="padding:14px 34px 30px;">
-          <p style="margin:0;font-size:14.5px;line-height:1.62;color:#4A463F;">
-            Building something already? Simply reply to this email and tell us what you're working on — early builders directly shape what we ship.
+        <!-- CTA Button -->
+        <tr><td align="center" style="padding:22px 36px 20px;">
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+            <td align="center" style="background:#D97757;border-radius:999px;box-shadow:0 10px 24px -8px rgba(217,119,87,.5);">
+              <a href="https://github.com/azar-vkn/STARTVATE-portfolio" target="_blank" style="display:inline-block;padding:13px 30px;font-size:14.5px;font-weight:600;color:#fff;text-decoration:none;border-radius:999px;">
+                Explore the Ecosystem &rarr;
+              </a>
+            </td>
+          </tr></table>
+        </td></tr>
+
+        <!-- Reply Prompt -->
+        <tr><td style="padding:18px 36px 28px;border-top:1px solid rgba(26,25,23,.08);">
+          <p style="margin:0;font-size:14px;line-height:1.58;color:#4A463F;">
+            <strong>Building something already?</strong> Simply reply to this email and tell us about what you're working on — early builders directly shape what we ship.
           </p>
-          <p style="margin:20px 0 0;font-size:14.5px;font-weight:600;color:#1A1917;">— The STARTVATE Team</p>
+          <p style="margin:16px 0 0;font-size:14px;font-weight:600;color:#1A1917;">&mdash; The STARTVATE Team</p>
         </td></tr>
 
         <!-- Footer -->
-        <tr><td style="padding:20px 34px;border-top:1px solid rgba(26,25,23,.09);background:#FCFBF8;">
-          <p style="margin:0;font-size:12px;line-height:1.55;color:#A9A296;">
+        <tr><td style="padding:18px 36px;border-top:1px solid rgba(26,25,23,.08);background:#FCFBF8;">
+          <p style="margin:0;font-size:12px;line-height:1.55;color:#A9A296;text-align:center;">
             You received this email because you signed up for the STARTVATE waitlist.<br />
-            One place to discover who to meet, what to explore, and what to do next.
+            &copy; 2026 STARTVATE &middot; The discovery layer for the startup ecosystem.
           </p>
         </td></tr>
 
