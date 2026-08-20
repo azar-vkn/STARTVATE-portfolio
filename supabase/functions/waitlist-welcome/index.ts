@@ -34,27 +34,27 @@ const json = (status: number, body: Record<string, unknown>) =>
 /* Email content                                                     */
 /* ---------------------------------------------------------------- */
 
-const SUBJECT = "You're on the STARTVATE waitlist";
+const SUBJECT = "Welcome to STARTVATE — We're Launching Soon!";
 
 const textBody = () =>
   [
-    'Welcome to STARTVATE.',
+    'Welcome to STARTVATE!',
     '',
-    "Thanks for joining the waitlist — you're on the list, and you'll hear from us before we open the doors.",
+    "Thanks for joining our early-access waitlist. We're getting ready to launch soon, and as an early builder, you'll be among the very first to get access.",
     '',
-    'What STARTVATE is:',
-    'One intelligent ecosystem for discovering founders, startups, opportunities, and the next step',
-    'to turn an idea into a company. Instead of searching across a dozen platforms, you describe what',
-    "you're building and we bring back the people, startups, opportunities and knowledge around it.",
+    'What STARTVATE brings to you:',
+    '• Discovery Layer: One place to discover founders, startups, mentors, and investors.',
+    '• Opportunity Radar: Curated hackathons, grants, accelerators, and funding tailored to your stage.',
+    '• AI Intelligence: Intelligent next steps and intent-based matching to turn ideas into companies.',
     '',
     'What happens next:',
-    '  1. We are building Phase 1 — search, startup discovery, opportunities and builder profiles.',
-    '  2. Early builders on this list get first access when it opens.',
-    '  3. We will email you as launch approaches. No spam in between.',
+    '  1. We are putting the finishing touches on our Phase 1 platform.',
+    '  2. You will receive an exclusive early-access invite before the public launch.',
+    '  3. No spam — only essential product milestones and your invite.',
     '',
-    "If you have something you want the product to solve, just reply to this email — early builders shape what we ship.",
+    "Have ideas or specific features you'd love to see? Just hit reply to this email. We'd love to hear what you're building!",
     '',
-    '— The STARTVATE team',
+    '— The STARTVATE Team',
     'One place to discover who to meet, what to explore, and what to do next.',
   ].join('\n');
 
@@ -63,52 +63,53 @@ const htmlBody = () => `<!doctype html>
 <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>${SUBJECT}</title></head>
 <body style="margin:0;padding:0;background:#FAF9F5;">
-  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">You're on the STARTVATE waitlist — early builders get first access.</div>
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Welcome to STARTVATE — We're launching soon. Early builders get priority access!</div>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FAF9F5;padding:32px 16px;">
     <tr><td align="center">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#FFFFFF;border:1px solid rgba(26,25,23,.09);border-radius:18px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 
+        <!-- Brand Header -->
         <tr><td style="padding:30px 34px 0;">
           <table role="presentation" cellpadding="0" cellspacing="0"><tr>
             <td style="padding-right:10px;">
-              <div style="width:30px;height:30px;border-radius:9px;background:#D97757;color:#fff;font-size:18px;line-height:30px;text-align:center;font-weight:700;">&#10022;</div>
+              <div style="width:32px;height:32px;border-radius:9px;background:#D97757;color:#fff;font-size:18px;line-height:32px;text-align:center;font-weight:700;">&#10022;</div>
             </td>
-            <td style="font-size:17px;font-weight:700;letter-spacing:-.03em;color:#1A1917;">STARTVATE</td>
+            <td style="font-size:18px;font-weight:700;letter-spacing:-.03em;color:#1A1917;">STARTVATE</td>
           </tr></table>
         </td></tr>
 
+        <!-- Greeting & Hero -->
         <tr><td style="padding:26px 34px 0;">
-          <div style="display:inline-block;padding:6px 13px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;">Early access</div>
-          <h1 style="margin:18px 0 0;font-size:27px;line-height:1.15;letter-spacing:-.03em;color:#1A1917;font-weight:600;">You're on the list.</h1>
+          <div style="display:inline-block;padding:6px 14px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">&#10024; Launching Soon</div>
+          <h1 style="margin:18px 0 0;font-size:28px;line-height:1.2;letter-spacing:-.03em;color:#1A1917;font-weight:600;">Welcome to STARTVATE!</h1>
           <p style="margin:14px 0 0;font-size:15.5px;line-height:1.62;color:#4A463F;">
-            Thanks for joining the STARTVATE waitlist. You'll hear from us before we open the doors —
-            and early builders get first access.
+            Thanks for joining our early-access waitlist. We are putting the final touches on the platform and <strong>getting ready to launch soon</strong>.
           </p>
         </td></tr>
 
+        <!-- Highlight Banner -->
         <tr><td style="padding:24px 34px 0;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FDF9F6;border:1px solid #F7E2D8;border-radius:12px;">
             <tr><td style="padding:18px 20px;">
-              <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#A64E2E;">What we're building</div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#A64E2E;">What to expect</div>
               <p style="margin:8px 0 0;font-size:14.5px;line-height:1.6;color:#4A463F;">
-                One intelligent ecosystem for discovering founders, startups, opportunities, and the next
-                step to turn an idea into a company. Describe what you're building, and we bring back the
-                people, startups, opportunities and knowledge around it.
+                One intelligent ecosystem for discovering founders, startups, opportunities, and the next step to turn an idea into a company. Describe what you're building, and we'll bring back the people, opportunities, and intelligence tailored for you.
               </p>
             </td></tr>
           </table>
         </td></tr>
 
+        <!-- Next Steps -->
         <tr><td style="padding:26px 34px 0;">
           <div style="font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#7A746A;">What happens next</div>
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px;">
             ${[
-              ['1', 'We ship Phase 1', 'Search, startup discovery, opportunities and builder profiles.'],
-              ['2', 'You get first access', 'Everyone on this list is invited before we open publicly.'],
-              ['3', 'We email you at launch', 'No spam in between — only what matters.'],
+              ['1', 'Priority Early Access', 'You will receive an exclusive invite before we open the platform to the public.'],
+              ['2', 'Launch Announcement', 'We will notify you the moment the discovery layer goes live.'],
+              ['3', 'Zero Spam', 'We only reach out with milestone updates and your personal access key.'],
             ]
               .map(
-                ([n, t, d]) => `<tr><td style="padding-bottom:12px;">
+                ([n, t, d]) => `<tr><td style="padding-bottom:14px;">
               <table role="presentation" cellpadding="0" cellspacing="0"><tr>
                 <td valign="top" style="width:26px;">
                   <div style="width:22px;height:22px;border-radius:999px;background:#FDF2EC;border:1px solid #F7E2D8;color:#A64E2E;font-size:11px;font-weight:700;line-height:22px;text-align:center;">${n}</div>
@@ -124,17 +125,18 @@ const htmlBody = () => `<!doctype html>
           </table>
         </td></tr>
 
+        <!-- Community Callout -->
         <tr><td style="padding:14px 34px 30px;">
           <p style="margin:0;font-size:14.5px;line-height:1.62;color:#4A463F;">
-            Building something already? Reply to this email and tell us what you'd want STARTVATE to
-            solve — early builders shape what we ship.
+            Building something already? Simply reply to this email and tell us what you're working on — early builders directly shape what we ship.
           </p>
-          <p style="margin:20px 0 0;font-size:14.5px;color:#1A1917;">— The STARTVATE team</p>
+          <p style="margin:20px 0 0;font-size:14.5px;font-weight:600;color:#1A1917;">— The STARTVATE Team</p>
         </td></tr>
 
+        <!-- Footer -->
         <tr><td style="padding:20px 34px;border-top:1px solid rgba(26,25,23,.09);background:#FCFBF8;">
           <p style="margin:0;font-size:12px;line-height:1.55;color:#A9A296;">
-            You're receiving this because you joined the STARTVATE waitlist.
+            You received this email because you signed up for the STARTVATE waitlist.<br />
             One place to discover who to meet, what to explore, and what to do next.
           </p>
         </td></tr>

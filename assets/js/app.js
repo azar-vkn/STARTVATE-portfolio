@@ -760,10 +760,10 @@
 
       request.then(function (res) {
         if (res.ok && res.duplicate) {
-          showMsg('ok', "You're already on the list — we'll be in touch before launch.");
+          showMsg('ok', "You're already on the list! We're launching soon — keep an eye on your inbox.");
           wlEmail.value = '';
         } else if (res.ok) {
-          showMsg('ok', "You're on the list. We'll be in touch before launch.");
+          showMsg('ok', "Welcome aboard! Check your inbox for a greeting email — we're launching soon!");
           wlEmail.value = '';
         } else {
           showMsg('err', res.message || 'Something went wrong. Please try again.');
